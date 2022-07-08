@@ -12,8 +12,10 @@ impl Component for App {
 
     fn view(&self, ctx: &Context<Self>) -> Html {
         html! {
-            <div>
-                <h1>{"Main page"}</h1>
+            <div class="section">
+                <div class="container">
+                    <h1 class="title">{"Main page"}</h1>
+                </div>
             </div>
         }   
     }
