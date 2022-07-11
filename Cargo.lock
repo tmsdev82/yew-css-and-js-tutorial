@@ -611,6 +611,18 @@ dependencies = [
 ]
 
 [[package]]
+name = "yew-css-and-js-tutorial"
+version = "0.1.0"
+dependencies = [
+ "gloo 0.8.0",
+ "log",
+ "wasm-bindgen",
+ "wasm-logger",
+ "web-sys",
+ "yew",
+]
+
+[[package]]
 name = "yew-macro"
 version = "0.19.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -622,16 +634,4 @@ dependencies = [
  "proc-macro2",
  "quote",
  "syn",
-]
-
-[[package]]
-name = "yew-routing-and-js-tutorial"
-version = "0.1.0"
-dependencies = [
- "gloo 0.8.0",
- "log",
- "wasm-bindgen",
- "wasm-logger",
- "web-sys",
- "yew",
 ]
