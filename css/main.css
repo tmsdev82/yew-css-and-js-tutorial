@@ -1,3 +1,16 @@
 h1.title {
     color: rgb(11, 142, 165);
 }
+
+.success {
+    color: green;
+}
+
+.warning {
+    color: orange;
+}
+
+
+.danger {
+    color: red;
+}
