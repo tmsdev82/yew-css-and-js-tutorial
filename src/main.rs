@@ -1,6 +1,8 @@
 use yew::prelude::*;
+use configurable_styling::ConfigurableStylingComponent;
 
 mod data_source;
+mod configurable_styling;
 
 struct App;
 
@@ -48,6 +50,9 @@ impl Component for App {
                             </tbody>
                         </table>
                     </div>
+                    <ConfigurableStylingComponent message="element 1" is_dark_mode={true} has_shadow={true} is_rounded={true} />
+                    <ConfigurableStylingComponent message="element 2" is_dark_mode={false} has_shadow={true} is_rounded={true} />
+                    <ConfigurableStylingComponent message="element 3" is_dark_mode={false} has_shadow={true} is_rounded={false} />
                 </div>
             </div>
         }   

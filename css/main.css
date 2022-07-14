@@ -10,7 +10,26 @@ h1.title {
     color: orange;
 }
 
-
 .danger {
     color: red;
+}
+
+.test-element {
+    margin-top: 15px;
+    width: 200px;
+    padding: 5px 10px;
+    text-align: center;
+}
+
+.dark {
+    color: white;
+    background-color: black;
+}
+
+.shadow {
+    box-shadow: 5px 5px lightblue;
+}
+
+.rounded {
+    border-radius: 25px;
 }
