@@ -1,8 +1,11 @@
 use yew::prelude::*;
 use configurable_styling::ConfigurableStylingComponent;
+use chart_component::ChartComponent;
 
 mod data_source;
 mod configurable_styling;
+mod bindings;
+mod chart_component;
 
 struct App;
 
@@ -34,25 +37,31 @@ impl Component for App {
 
         html! {
             <div class="section">
-                <div class="container">
-                    <h1 class="title">{"Main page"}</h1>
-                    <div>
-                        <table class="table is-hoverable is-striped">
-                            <thead>
-                                <tr>
-                                    <th>{"Item"}</th>
-                                    <th>{"Quantity"}</th>
-                                    <th>{"Value"}</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                            {for cur_data_html}
-                            </tbody>
-                        </table>
+                <div>
+                    <div class="container">
+                        <h1 class="title">{"Main page"}</h1>
+                        <h2 class="subtitle">{bindings::get_now_date()}</h2>
+                        <div >
+                            <table class="table is-hoverable is-striped">
+                                <thead>
+                                    <tr>
+                                        <th>{"Item"}</th>
+                                        <th>{"Quantity"}</th>
+                                        <th>{"Value"}</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                {for cur_data_html}
+                                </tbody>
+                            </table>
+                        </div>
+                        <ConfigurableStylingComponent message="element 1" is_dark_mode={true} has_shadow={true} is_rounded={true} />
+                        <ConfigurableStylingComponent message="element 2" is_dark_mode={false} has_shadow={true} is_rounded={true} />
+                        <ConfigurableStylingComponent message="element 3" is_dark_mode={false} has_shadow={true} is_rounded={false} />
                     </div>
-                    <ConfigurableStylingComponent message="element 1" is_dark_mode={true} has_shadow={true} is_rounded={true} />
-                    <ConfigurableStylingComponent message="element 2" is_dark_mode={false} has_shadow={true} is_rounded={true} />
-                    <ConfigurableStylingComponent message="element 3" is_dark_mode={false} has_shadow={true} is_rounded={false} />
+                </div>
+                <div>
+                    <ChartComponent />
                 </div>
             </div>
         }   
